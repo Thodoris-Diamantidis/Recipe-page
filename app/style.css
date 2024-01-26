@@ -76,3 +76,11 @@ h5,
 h6 {
   overflow-wrap: break-word;
 }
+
+.recipe {
+  padding: 40px;
+}
+.recipe__divider {
+  border: 1px solid var(--clr-neutral-grey-200);
+  margin-top: 32px;
+}
