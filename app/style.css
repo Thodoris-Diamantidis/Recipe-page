@@ -20,6 +20,11 @@
   --clr-neutral-grey-200: hsl(30, 18%, 87%);
   --clr-neutral-wenge-300: hsl(30, 10%, 34%);
   --clr-neutral-charcoal-600: hsl(24, 5%, 18%);
+
+  /* Font weights */
+  --fw-regular: 400;
+  --fw-semibold: 600;
+  --fw-bold: 700;
 }
 /*
   1. Use a more-intuitive box-sizing model.
@@ -79,7 +84,32 @@ h6 {
 
 /* General Styling */
 body {
+  display: flex;
+  width: 375px;
+  flex-direction: column;
+  align-items: flex-start;
+
+  font-family: Outfit;
+  font-size: 16px;
+  font-weight: var(--fw-regular);
+  color: var(--clr-neutral-wenge-300);
   background-color: var(--clr-neutral-eggshell-200);
+}
+
+h1 {
+  font-family: YoungSerif;
+  font-size: 36px;
+  font-weight: var(--fw-regular);
+  line-height: 100%;
+  color: var(--clr-neutral-charcoal-600);
+}
+
+h2 {
+  font-family: YoungSerif;
+  font-size: 28px;
+  line-height: 100%;
+
+  color: var(--clr-primary-nutmeg-500);
 }
 
 hr {
@@ -111,6 +141,52 @@ hr {
 
   padding: 40px 32px;
   gap: 32px;
+}
+
+/* Recipe Title Styling */
+.recipe__title {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+  align-self: stretch;
+}
+/* Recipe Preperation Styling */
+.recipe__prep {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  align-items: flex-start;
+  gap: 16px;
+
+  background: var(--clr-neutral-rosewhite-200);
+  border-radius: 12px;
+}
+
+.recipe__prep > p {
+  color: var(--clr-primary-ruspberry-600);
+  font-size: 20px;
+  font-weight: var(--fw-semibold);
+  line-height: 100%;
+}
+
+.recipe__prep li {
+  margin-bottom: 8px;
+}
+
+.recipe__prep li > span {
+  font-weight: var(--fw-bold);
+}
+
+/* Recipe Ingredients Styling */
+.recipe__ingredients {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.recipe__ingredients li {
+  margin-bottom: 8px;
 }
 
 /* Recipe Nutrition Styling */
